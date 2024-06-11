@@ -1,12 +1,11 @@
-name: Cloud check in action
+name: 天翼云盘自动签到
+
 on:
-  push:
-分支:
-      - main
-  watch:
-    types: started
   schedule:
-    - cron: 30 0 * * *
+    - cron: '8 0 * * *'
+  workflow_dispatch:
+    分支:
+      - main
     
 jobs:
   build-and-deploy:
